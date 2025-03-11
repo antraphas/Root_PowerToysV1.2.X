@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento de Modificações</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #007bff;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .dropdown-code {
+            margin: 10px 0;
+        }
+        .dropdown-code pre {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        #links-container {
+            display: none; /* Inicialmente oculto */
+            margin-top: 20px;
+        }
+        #links-container a {
+            display: block;
+            margin: 10px 0;
+            color: #007bff;
+            text-decoration: none;
+        }
+        #links-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="text-center mb-4">Modificações</h1>
+
+        <!-- Seção 1: Melhorias no Design e Usabilidade -->
+        <div class="section">
+            <h2>1. Melhorias no Design e Usabilidade</h2>
+            <h3>Arquivo <code>popup.html</code></h3>
+            <ul>
+                <li><strong>Adição do Bootstrap</strong>: Substituição do CSS customizado pelo Bootstrap para um design mais moderno e responsivo.</li>
+                <li><strong>Ícones do Font Awesome</strong>: Adição de ícones nos botões para melhorar a identificação visual das funcionalidades.</li>
+                <li><strong>Estrutura HTML melhorada</strong>: Uso de <code>div</code> com classes do Bootstrap para organizar o layout.</li>
+                <li><strong>Adicionado um novo botão "Links Úteis"</strong>: Um botão que exibe links úteis quando clicado.</li>
+                <li><strong>Adicionado um contêiner <code>#links-container</code></strong>: Para exibir os links úteis.</li>
+            </ul>
+
+            <div class="dropdown-code">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#popupHtmlCode">
+                    Ver Código do popup.html
+                </button>
+                <div class="collapse" id="popupHtmlCode">
+                    <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Root PowerToys&lt;/title&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body class="p-3"&gt;
+    &lt;div class="container"&gt;
+        &lt;h3 class="text-primary mb-4"&gt;&lt;i class="fas fa-tools me-2"&gt;&lt;/i&gt;Root PowerToys&lt;/h3&gt;
+        &lt;div id="message" class="alert d-none"&gt;&lt;/div&gt;
+        &lt;div class="mb-3"&gt;
+            &lt;label for="input-acesso" class="form-label"&gt;E-mail ou root:&lt;/label&gt;
+            &lt;input type="text" id="input-acesso" class="form-control" placeholder="Digite o e-mail ou o root"&gt;
+        &lt;/div&gt;
+        &lt;div id="loja-container" class="mb-3 d-none"&gt;
+            &lt;label for="select-loja" class="form-label"&gt;Selecione uma loja:&lt;/label&gt;
+            &lt;select id="select-loja" class="form-select"&gt;&lt;/select&gt;
+        &lt;/div&gt;
+        &lt;button id="acessar" class="btn btn-primary w-100 mb-2"&gt;
+            &lt;i class="fas fa-sign-in-alt me-2"&gt;&lt;/i&gt;Acessar Root
+        &lt;/button&gt;
+        &lt;button id="acessar-tuna" class="btn btn-secondary w-100 mb-2" disabled&gt;
+            &lt;i class="fas fa-fish me-2"&gt;&lt;/i&gt;Acessar a Tuna
+        &lt;/button&gt;
+        &lt;button id="redefinir-senha" class="btn btn-warning w-100 mb-2" disabled&gt;
+            &lt;i class="fas fa-key me-2"&gt;&lt;/i&gt;Redefinir Senha
+        &lt;/button&gt;
+        &lt;button id="btnLinksUteis" class="btn btn-info w-100 mb-2"&gt;
+            &lt;i class="fas fa-link me-2"&gt;&lt;/i&gt;Links Úteis
+        &lt;/button&gt;
+        &lt;div id="links-container"&gt;
+            &lt;a href="https://support-tools.k8s-legacy.dc.anotaai-production.com" target="_blank"&gt;Support Tools&lt;/a&gt;
+            &lt;a href="https://anotaai.superlogica.net/clients/financeiro/index/index2" target="_blank"&gt;SuperLogica&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div id="loading" class="text-center mt-3 d-none"&gt;
+            &lt;div class="spinner-border text-primary" role="status"&gt;
+                &lt;span class="visually-hidden"&gt;Carregando...&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;p class="mt-2"&gt;Carregando...&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+    &lt;script src="popup.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                    </code></pre>
+                </div>
+            </div>
+
+            <h3>Arquivo <code>style.css</code></h3>
+            <ul>
+                <li><strong>Efeitos Visuais</strong>: Adição de animações como <code>fadeIn</code> para mensagens de feedback.</li>
+                <li><strong>Suporte a Tema Escuro</strong>: Adição de regras CSS com <code>@media (prefers-color-scheme: dark)</code>.</li>
+                <li><strong>Melhoria na Responsividade</strong>: Uso de classes do Bootstrap para garantir que o layout se adapte a diferentes tamanhos de tela.</li>
+                <li><strong>Adicionado estilos para o contêiner de links e os próprios links</strong>.</li>
+            </ul>
+
+            <div class="dropdown-code">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#styleCssCode">
+                    Ver Código do style.css
+                </button>
+                <div class="collapse" id="styleCssCode">
+                    <pre><code>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    width: 300px;
+    padding: 10px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#message {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1e1e1e;
+        color: #f4f4f4;
+    }
+
+    .form-control, .form-select {
+        background-color: #2d2d2d;
+        color: #f4f4f4;
+        border-color: #555;
+    }
+
+    .btn-primary {
+        background-color: #66b2ff;
+        border-color: #66b2ff;
+        color: #1e1e1e;
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        border-color: #6c757d;
+    }
+
+    .btn-warning {
+        background-color: #ffc107;
+        border-color: #ffc107;
+        color: #1e1e1e;
+    }
+
+    .alert-success {
+        background-color: #2e7d32;
+        color: white;
+    }
+
+    .alert-error {
+        background-color: #d32f2f;
+        color: white;
+    }
+}
+
+#links-container {
+    display: none; /* Inicialmente oculto */
+    margin-top: 20px;
+}
+
+#links-container a {
+    display: block;
+    margin: 10px 0;
+    color: #007bff;
+    text-decoration: none;
+}
+
+#links-container a:hover {
+    text-decoration: underline;
+}
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção 2: Melhorias na Funcionalidade -->
+        <div class="section">
+            <h2>2. Melhorias na Funcionalidade</h2>
+            <h3>Arquivo <code>popup.js</code></h3>
+            <ul>
+                <li><strong>Feedback Visual Aprimorado</strong>: Adição de um indicador de carregamento (<code>spinner</code>) durante operações assíncronas.</li>
+                <li><strong>Mensagens de Feedback</strong>: Mensagens de sucesso e erro agora usam classes do Bootstrap (<code>alert-success</code> e <code>alert-danger</code>).</li>
+                <li><strong>Validação de Entrada</strong>: Validação aprimorada para garantir que apenas valores válidos (root ou e-mail) sejam processados.</li>
+                <li><strong>Lógica de Navegação</strong>: Reutilização da lógica de navegação para evitar duplicação de código.</li>
+                <li><strong>Adicionado um evento de clique para o botão "Links Úteis"</strong>: Alterna a visibilidade do contêiner de links.</li>
+                <li><strong>Redefinição de Senha com Seleção de Loja</strong>: Adicionada funcionalidade para selecionar uma loja específica ao redefinir a senha.</li>
+            </ul>
+
+            <div class="dropdown-code">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#popupJsCode">
+                    Ver Código do popup.js
+                </button>
+                <div class="collapse" id="popupJsCode">
+                    <pre><code>
+function showMessage(message, type = "success") {
+    const messageDiv = document.getElementById("message");
+    messageDiv.textContent = message;
+    messageDiv.className = `message ${type}`;
+    messageDiv.style.display = "block";
+
+    setTimeout(() => messageDiv.style.display = "none", 5000);
+}
+
+function showLoading() {
+    document.getElementById("loading").style.display = "flex";
+}
+
+function hideLoading() {
+    document.getElementById("loading").style.display = "none";
+}
+
+document.getElementById("acessar").addEventListener("click", async function () {
+    const input = document.getElementById("input-acesso").value.trim();
+
+    if (!input) {
+        showMessage("Por favor, insira um root ou um endereço de e-mail válido.", "error");
+        return;
+    }
+
+    showLoading();
+
+    chrome.storage.local.get("authToken", async (data) => {
+        const authToken = data.authToken;
+
+        if (!authToken) {
+            showMessage("Token de autenticação não encontrado. Faça login na Anota AI.", "error");
+            hideLoading();
+            return;
+        }
+
+        try {
+            let url = "";
+            const selectElement = document.getElementById("select-loja");
+            const isRoot = /^[a-f0-9]{24}$/.test(input);
+            const isEmail = /\S+@\S+\.\S+/.test(input);
+
+            if (!isRoot && !isEmail) {
+                showMessage("Por favor, insira um root ou um endereço de e-mail válido.", "error");
+                hideLoading();
+                return;
+            }
+
+            if (isRoot) {
+                url = `https://root.anota.ai/#/principal/establishment/${input}`;
+            } else if (isEmail) {
+                const response = await fetch(`https://root.anota.ai/auth/users/find-by/?email=${input}`, {
+                    method: "GET",
+                    headers: {
+                        "Authorization": `${authToken}`,
+                        "Content-Type": "application/json"
+                    }
+                });
+
+                const userData = await response.json();
+
+                if (!response.ok) {
+                    showMessage(`Erro: ${userData.err || "Algo deu errado."}`, "error");
+                    hideLoading();
+                    return;
+                }
+
+                const userRefs = userData?.userRefs;
+
+                if (!userRefs || userRefs.length === 0) {
+                    showMessage("Nenhuma página encontrada para este usuário.", "error");
+                    hideLoading();
+                    return;
+                }
+
+                if (userRefs.length > 1) {
+                    document.getElementById("loja-container").style.display = "block";
+                    selectElement.innerHTML = "";
+
+                    const defaultOption = document.createElement("option");
+                    defaultOption.value = "";
+                    defaultOption.textContent = "Selecione uma loja...";
+                    selectElement.appendChild(defaultOption);
+
+                    userRefs.forEach(ref => {
+                        const option = document.createElement("option");
+                        option.value = ref.page._id;
+                        option.textContent = `${ref.page.name} - ${ref.active ? "Ativa" : "Inativa"}`;
+                        selectElement.appendChild(option);
+                    });
+
+                    hideLoading();
+                    return;
+                }
+
+                url = `https://root.anota.ai/#/principal/establishment/${userRefs[0].page._id}`;
+            }
+
+            if (url) {
+                const tabs = await chrome.tabs.query({ url: "*://root.anota.ai/*" });
+
+                if (tabs.length > 0) {
+                    chrome.tabs.update(tabs[0].id, { url, active: true });
+                } else {
+                    chrome.tabs.create({ url });
+                }
+            }
+        } catch (error) {
+            showMessage("Ocorreu um erro ao tentar acessar as informações.", "error");
+        } finally {
+            hideLoading();
+        }
+    });
+});
+
+document.getElementById("select-loja").addEventListener("change", async function () {
+    const selectedPageId = this.value;
+    if (selectedPageId) {
+        const url = `https://root.anota.ai/#/principal/establishment/${selectedPageId}`;
+        const tabs = await chrome.tabs.query({ url: "*://root.anota.ai/*" });
+
+        if (tabs.length > 0) {
+            chrome.tabs.update(tabs[0].id, { url, active: true });
+        } else {
+            chrome.tabs.create({ url });
+        }
+    }
+});
+
+const inputAcesso = document.getElementById("input-acesso");
+const btnAcessarTuna = document.getElementById("acessar-tuna");
+const btnRedefinir = document.getElementById("redefinir-senha");
+
+inputAcesso.addEventListener("input", function () {
+    const isRoot = /^[a-f0-9]{24}$/.test(inputAcesso.value.trim());
+    btnAcessarTuna.disabled = !isRoot;
+
+    const isEmail = /\S+@\S+\.\S+/.test(inputAcesso.value.trim());
+    btnRedefinir.disabled = !isEmail;
+});
+
+btnAcessarTuna.addEventListener("click", async function () {
+    const input = document.getElementById("input-acesso").value.trim();
+
+    if (!input) {
+        showMessage("Por favor, insira um root válido.", "error");
+        return;
+    }
+
+    showLoading();
+
+    try {
+        const url = `https://console.tuna.uy/anota-ai/anota-ai/merchants/${input}/payout`;
+        const tabs = await chrome.tabs.query({ url: "*://console.tuna.uy/*" });
+
+        if (tabs.length > 0) {
+            chrome.tabs.update(tabs[0].id, { url, active: true });
+        } else {
+            chrome.tabs.create({ url });
+        }
+    } catch (error) {
+        showMessage("Ocorreu um erro ao tentar acessar as informações da Tuna.", "error");
+    } finally {
+        hideLoading();
+    }
+});
+
+document.getElementById("redefinir-senha").addEventListener("click", async function () {
+    const email = document.getElementById("input-acesso").value.trim();
+
+    if (!email || !/\S+@\S+\.\S+/.test(email)) {
+        showMessage("Por favor, insira um endereço de e-mail válido para redefinir a senha.", "error");
+        return;
+    }
+
+    showLoading();
+
+    try {
+        const response = await fetch("https://api.anota.ai/auth/session/authentication/forgot-password?isNewAdmin=true", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ user: email })
+        });
+
+        const result = await response.json();
+
+        if (!response.ok) {
+            showMessage(`Erro: ${result.err || "Não foi possível redefinir a senha."}`, "error");
+            return;
+        }
+
+        showMessage("E-mail de redefinição de senha enviado com sucesso!", "success");
+    } catch (error) {
+        showMessage("Ocorreu um erro ao tentar redefinir a senha.", "error");
+    } finally {
+        hideLoading();
+    }
+});
+
+document.getElementById("btnLinksUteis").addEventListener("click", function () {
+    const linksContainer = document.getElementById("links-container");
+    if (linksContainer.style.display === "none" || linksContainer.style.display === "") {
+        linksContainer.style.display = "block";
+    } else {
+        linksContainer.style.display = "none";
+    }
+});
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção 3: Melhorias na Eficiência -->
+        <div class="section">
+            <h2>3. Melhorias na Eficiência</h2>
+            <h3>Arquivo <code>popup.js</code></h3>
+            <ul>
+                <li><strong>Otimização de Código</strong>: Redução de duplicação de código ao reutilizar a lógica de navegação.</li>
+                <li><strong>Melhoria na Legibilidade</strong>: Código organizado em funções menores e mais específicas.</li>
+            </ul>
+        </div>
+
+        <!-- Seção 4: Melhorias na Experiência do Usuário -->
+        <div class="section">
+            <h2>4. Melhorias na Experiência do Usuário</h2>
+            <h3>Arquivo <code>popup.html</code></h3>
+            <ul>
+                <li><strong>Design Mais Atraente</strong>: Uso de cores e espaçamento consistentes com o Bootstrap.</li>
+                <li><strong>Feedback Imediato</strong>: Mensagens de sucesso/erro exibidas de forma clara e com animação.</li>
+                <li><strong>Links Úteis</strong>: Adição de um botão para exibir links úteis de forma interativa.</li>
+            </ul>
+        </div>
+
+        <!-- Seção 5: Resumo das Melhorias por Arquivo -->
+        <div class="section">
+            <h2>5. Resumo das Melhorias por Arquivo</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Arquivo</th>
+                        <th>Melhorias Implementadas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>manifest.json</code></td>
+                        <td>Atualização da versão para 1.3.</td>
+                    </tr>
+                    <tr>
+                        <td><code>popup.html</code></td>
+                        <td>Adição do Bootstrap, ícones do Font Awesome, estrutura HTML melhorada, botão "Links Úteis".</td>
+                    </tr>
+                    <tr>
+                        <td><code>style.css</code></td>
+                        <td>Efeitos visuais, suporte a tema escuro, código mais limpo e organizado, estilos para links úteis.</td>
+                    </tr>
+                    <tr>
+                        <td><code>popup.js</code></td>
+                        <td>Feedback visual aprimorado, validação de entrada, otimização de código, interatividade, redefinição de senha com seleção de loja.</td>
+                    </tr>
+                    <tr>
+                        <td><code>background.js</code></td>
+                        <td>Sem alterações significativas.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Seção 6: Benefícios das Melhorias -->
+        <div class="section">
+            <h2>6. Benefícios das Melhorias</h2>
+            <ul>
+                <li><strong>Design Moderno</strong>: Interface mais atraente e profissional.</li>
+                <li><strong>Usabilidade Aprimorada</strong>: Feedback visual claro e imediato.</li>
+                <li><strong>Eficiência</strong>: Código mais limpo e organizado.</li>
+                <li><strong>Experiência do Usuário</strong>: Interface responsiva e adaptável a temas escuros.</li>
+                <li><strong>Funcionalidades Adicionais</strong>: Links úteis e redefinição de senha com seleção de loja.</li>
+            </ul>
+        </div>
+
+        <!-- Seção 7: Como Testar as Melhorias -->
+        <div class="section">
+            <h2>7. Como Testar as Melhorias</h2>
+            <ol>
+                <li><strong>Instalação</strong>: Carregue a extensão no Chrome em modo de desenvolvedor.</li>
+                <li><strong>Testes</strong>: Abra uma página da Anota AI e use a extensão.</li>
+                <li><strong>Validação</strong>: Confira se todas as funcionalidades estão funcionando corretamente.</li>
+            </ol>
+        </div>
+
+        <!-- Seção 8: Considerações Finais -->
+        <div class="section">
+            <h2>8. Considerações Finais</h2>
+            <p>
+                As modificações implementadas tornam o sistema mais <strong>moderno</strong>, <strong>eficiente</strong> e <strong>amigável para o usuário</strong>. A inclusão do Bootstrap e Font Awesome, juntamente com melhorias no código e na usabilidade, eleva a qualidade da extensão sem comprometer suas funcionalidades originais. Além disso, a adição de novas funcionalidades, como os links úteis e a redefinição de senha com seleção de loja, melhora significativamente a experiência do usuário.
+            </p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

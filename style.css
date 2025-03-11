@@ -1,0 +1,200 @@
+body {
+    font-family: Arial, sans-serif;
+    width: 300px;
+    padding: 10px;
+    background: #f4f6f9;
+    color: #333;
+}
+
+h3 {
+    color: #007bff;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 8px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+button:active {
+    background: #004494;
+}
+
+button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+#message {
+    display: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#message.success {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#message.error {
+    background-color: #FF4D4D;
+    color: white;
+}
+
+#loading {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #007bff;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.fa-spinner {
+    animation: spin 1s linear infinite;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #1e1e1e;
+        color: #f4f4f4;
+    }
+
+    h3 {
+        color: #66b2ff;
+    }
+
+    label {
+        color: #f4f4f4;
+    }
+
+    input, select {
+        background: #2d2d2d;
+        color: #f4f4f4;
+        border: 1px solid #555;
+    }
+
+    input:focus {
+        border-color: #66b2ff;
+    }
+
+    button {
+        background: #66b2ff;
+        color: #1e1e1e;
+    }
+
+    button:hover {
+        background: #3399ff;
+    }
+
+    button:active {
+        background: #007acc;
+    }
+
+    button:disabled {
+        background-color: #444;
+        color: #888;
+    }
+
+    #message.success {
+        background-color: #2e7d32;
+    }
+
+    #message.error {
+        background-color: #d32f2f;
+    }
+
+    #loading {
+        color: #66b2ff;
+    }
+}
+
+#links-container {
+    display: none;
+    margin-top: 10px;
+}
+
+#links-container a {
+    display: block;
+    padding: 10px;
+    margin-bottom: 5px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background 0.2s ease-in-out;
+    /* width:max-content; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#links-container a:hover {
+    background: #0056b3;
+}
+
+@media (prefers-color-scheme: dark) {
+    #links-container a {
+        background: #66b2ff;
+        color: #1e1e1e;
+    }
+
+    #links-container a:hover {
+        background: #3399ff;
+    }
+}
